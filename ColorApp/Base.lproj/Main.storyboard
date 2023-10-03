@@ -108,21 +108,33 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jHx-fB-91F">
                                                 <rect key="frame" x="-2" y="0.0" width="224" height="31"/>
+                                                <connections>
+                                                    <action selector="rgbSlider:" destination="RmE-9g-qk0" eventType="valueChanged" id="DtT-TK-lhy"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uwt-iZ-VPr">
                                                 <rect key="frame" x="-2" y="65" width="224" height="31"/>
+                                                <connections>
+                                                    <action selector="rgbSlider:" destination="RmE-9g-qk0" eventType="valueChanged" id="b8K-Sw-8BA"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QdT-Po-1rs">
                                                 <rect key="frame" x="-2" y="130" width="224" height="31"/>
+                                                <connections>
+                                                    <action selector="rgbSlider:" destination="RmE-9g-qk0" eventType="valueChanged" id="Et7-0H-z90"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaH-UU-DbO">
-                                <rect key="frame" x="122.5" y="483.5" width="75" height="34.5"/>
+                                <rect key="frame" x="128" y="483.5" width="64.5" height="34.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="RmE-9g-qk0" eventType="touchUpInside" id="UCX-3B-e8a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9CO-kD-3tX"/>
@@ -138,6 +150,15 @@
                             <constraint firstItem="LaH-UU-DbO" firstAttribute="centerX" secondItem="9CO-kD-3tX" secondAttribute="centerX" id="scS-SZ-8Oo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="Tyy-iN-gix" id="r8k-o7-g7g"/>
+                        <outlet property="blueSlider" destination="QdT-Po-1rs" id="2cG-nN-Nig"/>
+                        <outlet property="colorView" destination="I8k-hw-G62" id="aMA-Nt-RDT"/>
+                        <outlet property="greenLabel" destination="ZqZ-5t-air" id="28d-qZ-iS5"/>
+                        <outlet property="greenSlider" destination="uwt-iZ-VPr" id="2wO-ml-EuV"/>
+                        <outlet property="redLabel" destination="dgF-1e-cg4" id="ugP-Rj-i7D"/>
+                        <outlet property="redSlider" destination="jHx-fB-91F" id="nop-9g-bWu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6h-pJ-Xd6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
